@@ -1,12 +1,8 @@
 <form id="membershipForm">
   <input type="text" name="name" required placeholder="पूरा नाम">
-
   <input type="tel" name="mobile" required placeholder="मोबाइल नंबर">
-
   <input type="text" name="business" placeholder="व्यवसाय / दुकान">
-
   <input type="text" name="address" placeholder="पता">
-
   <button type="submit" class="btn">आवेदन भेजें</button>
 </form>
 
@@ -26,6 +22,9 @@ document.getElementById("membershipForm").addEventListener("submit", function(e)
   fetch("https://script.google.com/macros/s/AKfycbwjWYGEdS0mJWQCuBK3zfE4vg-xhexciePsUk30eG2YFDLqhsY9Z5HzXKGWfHcNctQ2/exec", {
     method: "POST",
     mode: "no-cors",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8"
+    },
     body: JSON.stringify(data)
   });
 
